@@ -17,6 +17,6 @@ class insurances extends Model
 
     public function insure(){
 
-        return $this->belongsTo(Pateints::class);
+        return $this->hasMany(policyservice::class);
     }
 }

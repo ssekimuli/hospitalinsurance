@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\transactions;
 
 class Pateints extends Model
 {
@@ -17,17 +18,20 @@ class Pateints extends Model
         'Email',
     ];
 
-    public function insure(){
+
+    public function policy(){
         return $this->hasOne(policies::class);
     }
 
     public function PatientsInsurance(){
 
-         return $this->belongsToMany(insurances::class, 'pateints_id');
+         return $this->belongsToMany(insurances::class);
     }
 
-    public function PatientTransaction(){
+    public function payment(){
 
-         return $this->belongsToMany(transactions::class,'pateints_id');
+         return $this->hasMany(transactions::class);
+        //return $this->belongsTo(transactions::class);
+        
     }
 }

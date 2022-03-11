@@ -13,4 +13,10 @@ class policyservice extends Model
         'policy_id',
         'price',
     ];
+
+    public function service(){
+
+        //return $this->hasMany(service::class);
+        return $this->belongsTo(service::class);
+    }
 }

@@ -14,10 +14,10 @@ class serviceResource extends JsonResource
      */
     public function toArray($request)
     {
-        return [
+        /*return [
             'id'=>$this->id,
             'service'=>$this->service,
-        ];
+        ];*/
         return parent::toArray($request);
     }
 }

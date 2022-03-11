@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\transactions;
+use App\Models\Pateints;
 use App\Http\Resources\transactionResource;
 use DB;
 
@@ -16,7 +17,7 @@ class transactionsController extends Controller
      */
     public function index()
     {
-        $Tracsaction = transactions::paginate(20);
+        $Tracsaction = transactions::with('Pateints')->paginate(20);
 
         return transactionResource::collection($Tracsaction);
     }

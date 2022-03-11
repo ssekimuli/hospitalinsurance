@@ -17,9 +17,8 @@ class insuranceResource extends JsonResource
         return [
             'id'=>$this->id,
             'pateints_id'=>$this->pateints_id,
-            'pateint'=>$this->pateints,
             'policy_ID'=>$this->policy_ID,
-            'policy'=>$this->policy,
+            'policyservice'=>$this->policy,//$this->load('policyservice'),
         ];
         return parent::toArray($request);
     }

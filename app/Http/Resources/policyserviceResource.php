@@ -19,9 +19,9 @@ class policyserviceResource extends JsonResource
            'service_id'=>$this->service_id,
            'service'=>$this->service,
            'policy_id'=>$this->policy_id,
-           'policy'=>$this->policy,
            'price'=>$this->price, 
         ];
+
         return parent::toArray($request);
     }
 }

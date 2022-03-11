@@ -18,7 +18,8 @@ class PateintsController extends Controller
     public function index()
     {
         //list pateints
-        $pateints = Pateints::with('insure')->paginate(10);
+        $pateints = Pateints::with(['policy'])->paginate(10);
+        
 
         //return collection resource
         return pateintResource::collection($pateints);

@@ -12,8 +12,10 @@ class pateintResource extends JsonResource
      * @param  \Illuminate\Http\Request  $request
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
+
     public function toArray($request)
     {
+         
        /* return [
             'id'=>$this->id,
             'Fname'=>$this->Fname,
@@ -22,6 +24,7 @@ class pateintResource extends JsonResource
             'DoB'=>$this->DoB,
             'address'=>$this->address,
             'Email'=>$this->Email,
+            
             'insuranceCompany'=>$this->company,
             'service'=>$this->service,
             'policy'=>$this->policies,

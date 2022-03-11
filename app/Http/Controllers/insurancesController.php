@@ -14,7 +14,7 @@ class insurancesController extends Controller
      */
     public function index()
     {
-        $Insurance =insurances::paginate(10);
+        $Insurance =insurances::paginate(20);
 
         //return collection resource insurance
         return insuranceResource::collection($Insurance);

@@ -16,7 +16,7 @@ class PolicyServiceController extends Controller
      */
     public function index()
     {
-         $policyservice = policyservice::paginate(20);
+         $policyservice = policyservice::with(['service'])->paginate(20);
 
          return policyserviceResource::collection($policyservice);
     }

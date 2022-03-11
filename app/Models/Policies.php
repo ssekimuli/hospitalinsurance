@@ -27,4 +27,9 @@ class Policies extends Model
 
          return $this->belongsToMany(policyservice::class);
     }
+
+    public function policy(){
+
+         return $this->belongsToMany(insurances::class);
+    }
 }

@@ -14,6 +14,7 @@ class service extends Model
 
     public function policyOnService(){
 
-         return $this->belongsToMany(policyservice::class);
+         //return $this->belongsTo(policyservice::class);
+        return $this->hasMany(policyservice::class);
     }
 }

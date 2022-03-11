@@ -3,6 +3,8 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Models\Pateints;
+use App\Http\Resources\pateintResource;
 
 class transactionResource extends JsonResource
 {
@@ -14,14 +16,16 @@ class transactionResource extends JsonResource
      */
     public function toArray($request)
     {
-        return [
+        
+       /* return [
             'id'=>$this->id,
             'Amount'=>$this->Amount,
             'pateints_id'=>$this->pateints_id,
-            'pateint'=>$this->pateints,
+            //'pateint'=>$this->load('pateints'),//$this->pateints,
             'Date_paid'=>$this->created_at,
             'updated_at'=>$this->updated_at,
         ];
+        */
         return parent::toArray($request);
     }
 }
