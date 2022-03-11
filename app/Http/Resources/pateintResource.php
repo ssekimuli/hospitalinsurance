@@ -14,7 +14,7 @@ class pateintResource extends JsonResource
      */
     public function toArray($request)
     {
-        return [
+       /* return [
             'id'=>$this->id,
             'Fname'=>$this->Fname,
             'Lname'=>$this->Lname,
@@ -29,6 +29,7 @@ class pateintResource extends JsonResource
             'start_date'=>$this->policies,
             'end_date'=>$this->policies,
         ];
+        */
         return parent::toArray($request);
     }
 }
